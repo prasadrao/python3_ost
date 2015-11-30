@@ -1,0 +1,27 @@
+from string import ascii_uppercase
+
+class alphabator:
+
+    def __init__(self, lst):
+        "Initialize the iterator object."
+        self.lst = lst
+        #self.ind = 0
+        self.count = 0
+        self.uppercase = list(ascii_uppercase)
+
+    def __iter__(self):
+        "Iterates over list of items."
+        return self
+    def __next__(self):
+        if self.count < len(self.lst) :
+            if self.lst[self.count] > 0  and self.lst[self.count] <27:
+                return self.uppercase[self.lst[self.count] - 1]
+            else:
+                return self
+            self.count += 1
+        else:
+            raise StopIteration()
+
+if __name__ == "__main__":
+    for i in alphabator([1,2,3,'python']):
+        print(i)
