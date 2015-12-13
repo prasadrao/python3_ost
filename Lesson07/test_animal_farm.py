@@ -14,7 +14,7 @@ class Test(unittest.TestCase):
 
     def test_pig(self):
         "Tests the inhabitants of the farm"
-        ping = Pig("Napoleon")
+        pig = Pig("Napoleon")
         self.assertEqual(pig.sound(), "oink!")
         self.assertFalse(pig.has_wings())
 
@@ -28,5 +28,5 @@ class Test(unittest.TestCase):
         self.assertEqual(chicken.sound(), "bok bok!")
         self.assertTrue(chicken.has_wings())
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
         unittest.main()
