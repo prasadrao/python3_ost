@@ -1,12 +1,7 @@
-class CentipedeMixin:
+class Centipede():
     def __init__(self):
         self.legs = []
         self.stomach = []
-
-class Centipede(CentipedeMixin):
-    #def __init__(self):
-    #    self.legs = []
-    #    self.stomach = []
 
     def __call__(self, arg):
         self.stomach.append(arg)
@@ -18,8 +13,9 @@ class Centipede(CentipedeMixin):
         return ",".join(self.legs)
 
     def __setattr__(self, key, value):
-        if key in [ "stomach", "legs"]:
+        if key in [ "stomach", "legs"] and key in self.__dict__.keys():
             raise AttributeError("{0} is for internal use only".format(key))
         else:
             self.__dict__[key] = value
-            self.legs.append(key)
+            if key not in [ "stomach", "legs"]:
+                self.legs.append(key)
