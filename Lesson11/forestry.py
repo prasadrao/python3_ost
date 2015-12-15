@@ -1,7 +1,8 @@
 # import the logging module
 import logging
 #set p the logger
-logging.basicConfig(filename='forestry.log', level = logging.DEBUG)
+#logging.basicConfig(filename='forestry.log', level = logging.DEBUG)
+logging.basicConfig(filename='forestry.log', level = logging.ERROR)
 #log a message
 logging.info('Starting up the forestry program')
 
@@ -13,6 +14,7 @@ class Tree(object):
         "Initialize: insist that size is a valid code."
         if size not in self.sizes:
             message = "Tree size must be one of: %s" % ",".join(self.sizes.keys())
+            logging.error(message)
             raise ValueError(message)
         self.size = size
         logging.info('Instantiated a tree')
@@ -36,7 +38,10 @@ class Lumberjack(object):
     def cut_down_tree(self):
         "Convert tree to boards and go back to not having a tree."
         if not self.tree:
-            raise TypeError("Cannot cut_down_tree(): Lumberjack has no tree!")
+            #raise TypeError("Cannot cut_down_tree(): Lumberjack has no tree!")
+            msg = "Cannot cut_down_tree(): Lumberjack has no tree!"
+            logging.error(msg)
+            raise TypeError(msg)
         boards = self.tree.get_boards()
         self.tree = None
         logging.info('Lumberjack.tree cut down')

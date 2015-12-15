@@ -1,0 +1,2 @@
+ERROR:root:Tree size must be one of: S,XXL,XL,L,M
+ERROR:root:Cannot cut_down_tree(): Lumberjack has no tree!
