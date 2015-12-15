@@ -37,7 +37,7 @@ class Address:
     def state(self, value):
         reg = re.compile('^[A-Z]{2}$')
         if reg.match(value):
-            return value
+            self._state = value
         else:
             raise StateError("Please enter a valid state! {0!r} is not a valid state".format(value))
 
@@ -49,6 +49,6 @@ class Address:
     def zip_code(self, value):
         reg_digit = re.compile('^\d{5}$')
         if reg_digit.match(value):
-            return value
+            self._zipcode = value
         else:
             raise ZipCodeError("Please enter a valid zipcode! {0!r} is not a valid zipcode".format(value))

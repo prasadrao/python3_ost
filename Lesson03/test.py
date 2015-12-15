@@ -13,7 +13,6 @@ class Counter:
         else:
             return self.lst[self.current]
             self.current += 1
-            print self.current
 
 for c in Counter([3]):
     print c
