@@ -1,10 +1,25 @@
 # import the logging module
-import logging
-#set p the logger
+#set up the logger
 #logging.basicConfig(filename='forestry.log', level = logging.DEBUG)
-logging.basicConfig(filename='forestry.log', level = logging.ERROR)
+#logging.basicConfig(filename='forestry.log', level = logging.ERROR)
 #log a message
-logging.info('Starting up the forestry program')
+#logging.info('Starting up the forestry program')
+import logging
+LOG_FILENAME = "forestry.log"
+LOG_FORMAT = "%(asctime)s %(name)s:%(levelname)s:%(filename)s function:%(funcName)s line:%(lineno)d %(message)s"
+DEFAULT_LOG_LEVEL = "error" # Default log level
+LEVELS = {'debug': logging.DEBUG,
+          'info': logging.INFO,
+          'warning': logging.WARNING,
+          'error': logging.ERROR,
+          'critical': logging.CRITICAL
+          }
+
+def start_logging(filename=LOG_FILENAME, level=DEFAULT_LOG_LEVEL):
+    "Start logging with given filename and level."
+    logging.basicConfig(filename=filename, level=LEVELS[level], format=LOG_FORMAT)
+    # log a message
+    logging.info('Starting up the forestry program')
 
 class Tree(object):
     "Represent a tree in a forest that can be converted into boards."

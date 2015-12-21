@@ -1,6 +1,6 @@
 import unittest
 
-from forestry import Lumberjack, Tree
+from forestry import Lumberjack, Tree, start_logging
 
 sizes = (("S",1 ), ("M", 2), ("L", 3), ("XL", 4), ("XXL", 5))
 
@@ -32,4 +32,5 @@ class TestLumberjack(unittest.TestCase):
             self.assertEqual(boards, brds)
 
 if __name__ == "__main__":
+    start_logging(level="info")
     unittest.main()

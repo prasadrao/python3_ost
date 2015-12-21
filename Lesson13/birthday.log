@@ -1,0 +1,33 @@
+ERROR:root:time data '10-32-1948' does not match format '%m-%d-%Y'
+ERROR:root:time data '10-32-1948' does not match format '%m-%d-%Y'
+ERROR:root:time data '10-32-1948' does not match format '%m-%d-%Y'
+DEBUG:root:birthday: 1948-10-31 00:00:00
+DEBUG:root:upcoming: 2015-10-31 00:00:00
+DEBUG:root:fixed upcoming: 2016-10-30 00:00:00
+DEBUG:root:duration: 316 days, 5:25:31.491375
+DEBUG:root:birthday: 1999-02-01 00:00:00
+DEBUG:root:upcoming: 2015-02-01 00:00:00
+DEBUG:root:fixed upcoming: 2016-02-01 00:00:00
+DEBUG:root:duration: 44 days, 5:25:31.483181
+ERROR:root:time data '10-32-1948' does not match format '%m-%d-%Y'
+DEBUG:root:birthday: 1957-11-01 00:00:00
+DEBUG:root:upcoming: 2015-11-01 00:00:00
+DEBUG:root:fixed upcoming: 2016-10-31 00:00:00
+DEBUG:root:duration: 317 days, 5:25:04.986977
+ERROR:root:time data '16-12-1981' does not match format '%m-%d-%Y'
+DEBUG:root:birthday: 1981-12-16 00:00:00
+DEBUG:root:upcoming: 2015-12-16 00:00:00
+DEBUG:root:fixed upcoming: 2016-12-15 00:00:00
+DEBUG:root:duration: 362 days, 5:24:26.076380
+DEBUG:root:birthday: 1981-10-27 00:00:00
+DEBUG:root:upcoming: 2015-10-27 00:00:00
+DEBUG:root:fixed upcoming: 2016-10-26 00:00:00
+DEBUG:root:duration: 312 days, 5:24:14.471491
+DEBUG:root:birthday: 2012-06-02 00:00:00
+DEBUG:root:upcoming: 2015-06-02 00:00:00
+DEBUG:root:fixed upcoming: 2016-06-01 00:00:00
+DEBUG:root:duration: 165 days, 5:24:00.218728
+DEBUG:root:birthday: 1991-04-04 00:00:00
+DEBUG:root:upcoming: 2015-04-04 00:00:00
+DEBUG:root:fixed upcoming: 2016-04-03 00:00:00
+DEBUG:root:duration: 106 days, 5:23:42.166443

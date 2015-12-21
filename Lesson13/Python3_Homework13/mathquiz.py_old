@@ -1,0 +1,27 @@
+from datetime import datetime
+import random
+def math_quiz():
+    count = 0
+    start_time = datetime.now()
+    res = {}
+    while count < 5:
+        a = random.randrange(1,10)
+        b = random.randrange(1,10)
+        start_time = datetime.now()
+        ans = input("What is the sum of {0} and {1} ?\n".format(a,b))
+        if int(ans) == a + b:
+            print("{0} is right answer!".format(ans))
+            res[count+1] = [(datetime.now() - start_time).seconds, "right"]
+        else:
+            print("{0} is Wrong answer!".format(ans))
+            res[count+1] = [(datetime.now() - start_time).seconds, "wrong"]
+        count += 1
+    tot_time = 0
+    for key, val in res.items():
+        print("Question #{0} took about {1} seconds and answer was {2}".format(key,val[0],val[1]))
+        tot_time += val[0]
+    print("You took {} seconds to finish the quiz.".format(tot_time))
+    print("Your average time was {} seconds per question.".format(tot_time/5))
+
+if __name__ == '__main__':
+    math_quiz()

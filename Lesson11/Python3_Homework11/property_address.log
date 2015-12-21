@@ -1,0 +1,5 @@
+2015-12-18 11:59:20,750 - INFO - __init__ - Creating a new address
+2015-12-18 11:59:20,750 - INFO - __init__ - Creating a new address
+2015-12-18 11:59:20,751 - ERROR - state - State exception
+2015-12-18 11:59:20,751 - INFO - __init__ - Creating a new address
+2015-12-18 11:59:20,752 - ERROR - zip_code - ZipCode exception
